@@ -3,60 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camille Angel M. - Portfolio</title>
+    <title>Camille Angel M.</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
-        header { background: #333; color: white; padding: 15px; }
-        nav { background: #444; padding: 10px; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-        section { padding: 20px; }
-        footer { background: #333; color: white; padding: 10px; position: fixed; bottom: 0; width: 100%; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #333; color: white; padding: 1rem 0; text-align: center; }
+        nav { background: #444; padding: 0.5rem; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; padding: 0.5rem; }
+        section { padding: 2rem; }
+        footer { background: #333; color: white; text-align: center; padding: 1rem; position: fixed; bottom: 0; width: 100%; }
     </style>
 </head>
 <body>
     <header>
         <h1>Camille Angel M.</h1>
-        <p>Lifecycle & Email Marketing Specialist</p>
     </header>
-    
     <nav>
         <a href="#about">About</a>
-        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
     </nav>
-    
     <section id="about">
         <h2>About Me</h2>
-        <p>10+ years of experience in marketing and operations, specializing in lifecycle marketing, email strategy, and automation.</p>
+        <p>Marketing and operations expert with 10+ years of experience in lifecycle marketing, automation, and data-driven strategies.</p>
     </section>
-    
-    <section id="experience">
-        <h2>Work Experience</h2>
-        <p>Currently working as a Lifecycle Marketer with expertise in email platform migration, segmentation, and automation.</p>
-    </section>
-    
     <section id="projects">
         <h2>Projects</h2>
-        <p><strong>Sweet Potatoes Podcast:</strong> A self-discovery podcast with a global audience.</p>
-        <p><strong>Ahon Pilipino:</strong> A non-profit initiative aiding communities in need.</p>
+        <ul>
+            <li><strong>Sweet Potatoes Podcast:</strong> Empowering podcast resonating with over 600 listeners across 8+ platforms.</li>
+            <li><strong>Ahon Pilipino:</strong> Non-profit initiative driving over 1,000 miles to support frontline workers and communities.</li>
+        </ul>
     </section>
-    
-    <section id="skills">
-        <h2>Skills</h2>
-        <p>Email Marketing, Automation, A/B Testing, Data Analytics, HTML & CSS for email, CRM platforms (HubSpot, Klaviyo, Sailthru).</p>
-    </section>
-    
     <section id="contact">
         <h2>Contact</h2>
         <p>Email: hellocamilleangel@gmail.com</p>
-        <p>Portfolio: <a href="https://sites.google.com/view/camilleangel/about" target="_blank">View Here</a></p>
     </section>
-    
     <footer>
-        <p>&copy; 2025 Camille Angel M. All Rights Reserved.</p>
+        <p>&copy; 2025 Camille Angel M.</p>
     </footer>
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
-
